@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS posts
+(
+    id         SERIAL PRIMARY KEY,
+    title      VARCHAR(255) NOT NULL,
+    content    TEXT         NOT NULL,
+    user_id    INTEGER      NOT NULL REFERENCES users (id) ON DELETE CASCADE,
+    created_at TIMESTAMPTZ  NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
