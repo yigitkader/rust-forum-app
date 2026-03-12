@@ -1,8 +1,8 @@
 mod router;
+mod handlers;
 
 use crate::router::routes;
-use axum::routing::get;
-use axum::{Router, serve};
+use axum::serve;
 
 #[derive(Clone, Debug)]
 struct AppState {
